@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kızgın Tavuk İzmit - Lezzetin Adresi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="images/logo.png"
+            alt="Kızgın Tavuk İzmit"
+            class="logo-img"
+          />
+          <span class="logo-text">Kızgın Tavuk İzmit</span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link">Menü</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">Hakkımızda</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a href="#order" class="nav-link order-btn">Sipariş Ver</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero page active">
+      <div class="hero-background-slider">
+        <div
+          class="bg-slide active"
+          style="background-image: url('images/slide1.svg')"
+        ></div>
+        <div
+          class="bg-slide"
+          style="background-image: url('images/slide2.svg')"
+        ></div>
+        <div
+          class="bg-slide"
+          style="background-image: url('images/slide3.svg')"
+        ></div>
+        <div
+          class="bg-slide"
+          style="background-image: url('images/slide4.svg')"
+        ></div>
+        <div
+          class="bg-slide"
+          style="background-image: url('images/slide5.svg')"
+        ></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Lezzetin Adresi</h1>
+        <p class="hero-subtitle">İzmit'in en lezzetli tavuk menüleri</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Menüyü Gör</a>
+          <a href="#order" class="btn btn-secondary">Hemen Sipariş Ver</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-chicken.jpg" alt="Lezzetli Tavuk" />
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section page">
+      <div class="container">
+        <h2 class="section-title">Menümüz</h2>
+        <div class="menu-categories">
+          <button class="category-btn active" data-category="all">Tümü</button>
+          <button class="category-btn" data-category="chicken">
+            Tavuk Menüleri
+          </button>
+          <button class="category-btn" data-category="burgers">
+            Burgerler
+          </button>
+          <button class="category-btn" data-category="sides">
+            Yan Ürünler
+          </button>
+          <button class="category-btn" data-category="drinks">İçecekler</button>
+        </div>
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu items will be loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section page">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title">Hakkımızda</h2>
+            <p>
+              Kızgın Tavuk İzmit olarak, 2020 yılından bu yana İzmit'te hizmet
+              vermekteyiz. Taze ve kaliteli malzemelerle hazırladığımız lezzetli
+              tavuk menülerimizle müşterilerimizin gönlünü kazanmaya devam
+              ediyoruz.
+            </p>
+            <p>
+              Misyonumuz, en kaliteli tavuk etini en lezzetli şekilde sunarak
+              müşterilerimizin damaklarında unutulmaz tatlar bırakmaktır.
+            </p>
+            <div class="features">
+              <div class="feature">
+                <i class="fas fa-clock"></i>
+                <h3>Hızlı Servis</h3>
+                <p>5-10 dakika içinde hazır</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-leaf"></i>
+                <h3>Taze Malzeme</h3>
+                <p>Günlük taze ürünler</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-heart"></i>
+                <h3>Kaliteli Hizmet</h3>
+                <p>Müşteri memnuniyeti odaklı</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="images/about-us.jpg" alt="Restoranımız" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section page">
+      <div class="container">
+        <h2 class="section-title">İletişim</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Adres</h3>
+                <p>İzmit Merkez, Kocaeli</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Telefon</h3>
+                <p>+90 262 XXX XX XX</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Çalışma Saatleri</h3>
+                <p>Her gün 10:00 - 23:00</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>+90 532 XXX XX XX</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <input type="text" placeholder="Adınız" required />
+              <input type="email" placeholder="E-posta" required />
+              <input type="tel" placeholder="Telefon" />
+              <textarea placeholder="Mesajınız" rows="5" required></textarea>
+              <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section page">
+      <div class="container">
+        <h2 class="section-title">Sipariş Ver</h2>
+        <div class="order-content">
+          <div class="order-info">
+            <h3>Nasıl Sipariş Verebilirsiniz?</h3>
+            <div class="order-methods">
+              <div class="order-method">
+                <i class="fab fa-whatsapp"></i>
+                <h4>WhatsApp</h4>
+                <p>Menüyü inceleyip WhatsApp'tan sipariş verin</p>
+                <a
+                  href="https://wa.me/90532XXXXXXX"
+                  class="btn btn-whatsapp"
+                  target="_blank"
+                >
+                  <i class="fab fa-whatsapp"></i> WhatsApp'tan Sipariş Ver
+                </a>
+              </div>
+              <div class="order-method">
+                <i class="fas fa-phone"></i>
+                <h4>Telefon</h4>
+                <p>Bizi arayarak sipariş verebilirsiniz</p>
+                <a href="tel:+90262XXXXXXX" class="btn btn-phone">
+                  <i class="fas fa-phone"></i> Ara
+                </a>
+              </div>
+              <div class="order-method">
+                <i class="fas fa-store"></i>
+                <h4>Mağazadan</h4>
+                <p>Mağazamıza gelerek sipariş verebilirsiniz</p>
+                <a href="#contact" class="btn btn-store">
+                  <i class="fas fa-map-marker-alt"></i> Konum
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Kızgın Tavuk İzmit</h3>
+            <p>İzmit'in en lezzetli tavuk menüleri</p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/kizgintavukizmit/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Hızlı Linkler</h4>
+            <ul>
+              <li><a href="#home">Ana Sayfa</a></li>
+              <li><a href="#menu">Menü</a></li>
+              <li><a href="#about">Hakkımızda</a></li>
+              <li><a href="#contact">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>İletişim</h4>
+            <p><i class="fas fa-map-marker-alt"></i> İzmit Merkez, Kocaeli</p>
+            <p><i class="fas fa-phone"></i> +90 262 XXX XX XX</p>
+            <p><i class="fas fa-clock"></i> Her gün 10:00 - 23:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Kızgın Tavuk İzmit. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
