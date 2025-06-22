@@ -699,3 +699,851 @@ body {
     padding: 0 15px;
   }
 }
+
+/* Game Section Styles */
+.game-section {
+  background-color: white !important;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.game-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.game-info {
+  margin-bottom: 30px;
+}
+
+.game-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.game-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  border: 3px solid #e74c3c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#gameCanvas {
+  display: block;
+  background: linear-gradient(to bottom, #87ceeb 0%, #98fb98 100%);
+  cursor: pointer;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.game-message {
+  text-align: center;
+  color: white;
+  padding: 30px;
+  background: rgba(231, 76, 60, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.game-message h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.game-message p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.game-controls {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.game-controls p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.game-controls ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-controls li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-controls kbd {
+  background: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Game Over States */
+.game-overlay.hidden {
+  display: none;
+}
+
+.game-message.win {
+  background: rgba(46, 204, 113, 0.9);
+}
+
+.game-message.lose {
+  background: rgba(231, 76, 60, 0.9);
+}
+
+/* Responsive Game Styles */
+@media (max-width: 768px) {
+  .game-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #gameCanvas {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .game-message h3 {
+    font-size: 1.5rem;
+  }
+
+  .game-message p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    border-width: 2px;
+  }
+
+  .game-message {
+    padding: 20px;
+  }
+
+  .game-controls {
+    padding: 15px;
+  }
+}
+
+/* Athletes Section Styles */
+.athletes-section {
+  background: #0f0f23;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+}
+
+.athletes-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(231, 76, 60, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 107, 107, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(231, 76, 60, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.athletes-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.athletes-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 80px 0;
+  position: relative;
+}
+
+.athletes-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e74c3c, transparent);
+}
+
+.athletes-text {
+  text-align: left;
+}
+
+.athletes-text h3 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 0 30px rgba(231, 76, 60, 0.3);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #b0b0b0;
+  font-weight: 300;
+}
+
+.hero-image {
+  text-align: center;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(231, 76, 60, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+.protein-info {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.protein-info h3 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+}
+
+.protein-calculator {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.protein-calculator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 80%;
+  background: linear-gradient(180deg, transparent, #e74c3c, transparent);
+}
+
+.calculator-item {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.calculator-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.calculator-item h4 {
+  color: #e74c3c;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.calculator-item p {
+  color: #b0b0b0;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.calculator-item strong {
+  color: #e74c3c;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.chicken-rice-promotion {
+  margin-bottom: 100px;
+  position: relative;
+  padding: 80px 0;
+}
+
+.chicken-rice-promotion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(231, 76, 60, 0.1) 0%,
+    transparent 50%
+  );
+  border-radius: 50px;
+}
+
+.promotion-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.promotion-content h3 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 0 0 30px rgba(231, 76, 60, 0.3);
+}
+
+.promotion-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #b0b0b0;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.benefit-item {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+  padding: 30px 20px;
+}
+
+.benefit-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.benefit-item i {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+}
+
+.benefit-item h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.benefit-item p {
+  color: #b0b0b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.our-chicken-rice {
+  margin-bottom: 100px;
+  text-align: center;
+  position: relative;
+  padding: 80px 0;
+}
+
+.our-chicken-rice::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 30% 70%,
+      rgba(231, 76, 60, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255, 107, 107, 0.1) 0%,
+      transparent 50%
+    );
+  border-radius: 50px;
+}
+
+.our-chicken-rice h3 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-shadow: 0 0 30px rgba(231, 76, 60, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.special-features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.feature-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.feature-item i {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-bottom: 25px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 25px rgba(231, 76, 60, 0.5);
+}
+
+.feature-item h4 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-item p {
+  color: #b0b0b0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 80px 50px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.cta-section h4 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section .btn {
+  background: white;
+  color: #e74c3c;
+  font-weight: 700;
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.nutrition-tips {
+  position: relative;
+  padding: 80px 0;
+}
+
+.nutrition-tips::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(231, 76, 60, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 107, 107, 0.1) 0%,
+      transparent 50%
+    );
+  border-radius: 50px;
+}
+
+.nutrition-tips h3 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.tips-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.tip-item {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+  padding: 40px 30px;
+}
+
+.tip-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.tip-item h4 {
+  color: #e74c3c;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 15px rgba(231, 76, 60, 0.3);
+}
+
+.tip-item ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tip-item li {
+  color: #b0b0b0;
+  line-height: 2;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.tip-item li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+/* Responsive Athletes Styles */
+@media (max-width: 768px) {
+  .athletes-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .athletes-text {
+    text-align: center;
+  }
+
+  .athletes-text h3 {
+    font-size: 2.5rem;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+
+  .protein-calculator {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .protein-calculator::before {
+    display: none;
+  }
+
+  .benefits-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .special-features {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tips-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .nutrition-tips {
+    padding: 60px 0;
+  }
+
+  .promotion-content {
+    padding: 60px 0;
+  }
+
+  .calculator-item,
+  .feature-item,
+  .tip-item {
+    padding: 30px 20px;
+  }
+
+  .cta-section {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .athletes-text h3 {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .nutrition-tips,
+  .promotion-content {
+    padding: 40px 0;
+  }
+
+  .calculator-item,
+  .feature-item,
+  .tip-item {
+    padding: 25px 15px;
+  }
+
+  .cta-section {
+    padding: 40px 20px;
+  }
+
+  .cta-section h4 {
+    font-size: 1.8rem;
+  }
+}
+
+.promotion-image {
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.promotion-image img {
+  width: 100%;
+  max-width: 375px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 25px 80px rgba(231, 76, 60, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.promotion-image img:hover {
+  transform: scale(1.05);
+}

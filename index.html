@@ -37,6 +37,12 @@
             <a href="#about" class="nav-link">Hakkımızda</a>
           </li>
           <li class="nav-item">
+            <a href="#game" class="nav-link">Oyun</a>
+          </li>
+          <li class="nav-item">
+            <a href="#athletes" class="nav-link">Sporculara Özel</a>
+          </li>
+          <li class="nav-item">
             <a href="#contact" class="nav-link">İletişim</a>
           </li>
           <li class="nav-item">
@@ -198,6 +204,194 @@
       </div>
     </section>
 
+    <!-- Game Section -->
+    <section id="game" class="game-section page">
+      <div class="container">
+        <h2 class="section-title">Kızgın Tavuk Oyunu</h2>
+        <div class="game-content">
+          <div class="game-info">
+            <p>Kaktüslerden zıplayarak 3 dakika hayatta kalmaya çalış!</p>
+            <div class="game-stats">
+              <div class="stat">
+                <span class="stat-label">Süre:</span>
+                <span id="gameTime" class="stat-value">03:00</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Skor:</span>
+                <span id="gameScore" class="stat-value">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="game-container">
+            <canvas id="gameCanvas" width="800" height="300"></canvas>
+            <div id="gameOverlay" class="game-overlay">
+              <div class="game-message">
+                <h3 id="gameMessage">Oyunu Başlat</h3>
+                <p id="gameInstructions">Zıplamak için boşluk tuşuna basın</p>
+                <button id="startGameBtn" class="btn btn-primary">
+                  Oyunu Başlat
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="game-controls">
+            <p><strong>Kontroller:</strong></p>
+            <ul>
+              <li><kbd>Boşluk</kbd> - Zıpla</li>
+              <li><kbd>R</kbd> - Yeniden Başlat</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Athletes Section -->
+    <section id="athletes" class="athletes-section page">
+      <div class="container">
+        <h2 class="section-title">Sporculara Özel</h2>
+        <div class="athletes-content">
+          <div class="athletes-hero">
+            <div class="athletes-text">
+              <h3>Antrenman Sonrası Protein İhtiyacınız</h3>
+              <p class="hero-description">
+                Spor yaptıktan sonra kaslarınızın onarımı ve gelişimi için
+                kaliteli protein alımı çok önemlidir. Antrenman sonrası 30-60
+                dakika içinde protein tüketimi, kas protein sentezini maksimize
+                eder.
+              </p>
+            </div>
+            <div class="hero-image">
+              <img
+                src="images/tavuk_pilav.png"
+                alt="Tavuk Pilav"
+                onerror="this.src='images/placeholder.svg'"
+              />
+            </div>
+          </div>
+
+          <div class="protein-info">
+            <h3>Protein İhtiyacınız Ne Kadar?</h3>
+            <div class="protein-calculator">
+              <div class="calculator-item">
+                <h4>Vücut Ağırlığınıza Göre</h4>
+                <p>
+                  <strong>1.2 - 2.0 gram/kg</strong> protein günlük ihtiyacınız
+                </p>
+                <p>
+                  Örnek: 70 kg sporcu için <strong>84-140 gram</strong> protein
+                </p>
+              </div>
+              <div class="calculator-item">
+                <h4>Antrenman Sonrası</h4>
+                <p><strong>20-30 gram</strong> protein ideal miktar</p>
+                <p>
+                  Hızlı emilim için <strong>30 dakika içinde</strong> tüketin
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chicken-rice-promotion">
+            <div class="promotion-content">
+              <h3>🏆 Sporcuların Tercihi: Tavuk Pilav</h3>
+              <p>
+                Profesyonel sporcular ve fitness tutkunları antrenman sonrası
+                protein ihtiyaçlarını karşılamak için genellikle
+                <strong>Tavuk Pilav</strong> tercih ederler. Neden mi?
+              </p>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <i class="fas fa-dumbbell"></i>
+                  <h4>Yüksek Protein</h4>
+                  <p>100g tavuk eti = 25g protein</p>
+                </div>
+                <div class="benefit-item">
+                  <i class="fas fa-bolt"></i>
+                  <h4>Hızlı Enerji</h4>
+                  <p>Pilav karbonhidratı ile hızlı toparlanma</p>
+                </div>
+                <div class="benefit-item">
+                  <i class="fas fa-heart"></i>
+                  <h4>Düşük Yağ</h4>
+                  <p>Göğüs eti ile yağsız protein kaynağı</p>
+                </div>
+                <div class="benefit-item">
+                  <i class="fas fa-clock"></i>
+                  <h4>Hızlı Hazırlık</h4>
+                  <p>Antrenman sonrası hemen tüketime hazır</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="our-chicken-rice">
+            <h3>🍗 Kızgın Tavuk İzmit'in Tavuk Pilavı</h3>
+            <div class="special-features">
+              <div class="feature-item">
+                <i class="fas fa-star"></i>
+                <h4>Premium Kalite</h4>
+                <p>
+                  En kaliteli tavuk göğsü eti, özel baharatlarla marine edilmiş
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-leaf"></i>
+                <h4>Taze Malzeme</h4>
+                <p>Günlük taze pilav, sebzeler ve baharatlar</p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-calculator"></i>
+                <h4>Protein Değeri</h4>
+                <p>Porsiyon başına yaklaşık 35-40 gram protein</p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-fire"></i>
+                <h4>Kalori Kontrolü</h4>
+                <p>Düşük yağ, yüksek protein, dengeli karbonhidrat</p>
+              </div>
+            </div>
+            <div class="cta-section">
+              <h4>Antrenman Sonrası Protein İhtiyacınız İçin</h4>
+              <p>Hemen sipariş verin, 10 dakika içinde hazır!</p>
+              <a href="#order" class="btn btn-primary"
+                >Tavuk Pilav Sipariş Ver</a
+              >
+            </div>
+          </div>
+
+          <div class="nutrition-tips">
+            <h3>💪 Beslenme İpuçları</h3>
+            <div class="tips-container">
+              <div class="tip-item">
+                <h4>Antrenman Öncesi</h4>
+                <ul>
+                  <li>Antrenmandan 2-3 saat önce yemek yiyin</li>
+                  <li>Karbonhidrat ağırlıklı beslenin</li>
+                  <li>Yeterli su tüketin</li>
+                </ul>
+              </div>
+              <div class="tip-item">
+                <h4>Antrenman Sonrası</h4>
+                <ul>
+                  <li>30 dakika içinde protein alın</li>
+                  <li>Karbonhidrat ile birlikte tüketin</li>
+                  <li>Su kaybını telafi edin</li>
+                </ul>
+              </div>
+              <div class="tip-item">
+                <h4>Günlük Beslenme</h4>
+                <ul>
+                  <li>Protein ihtiyacınızı 3-4 öğüne bölün</li>
+                  <li>Kaliteli protein kaynakları tercih edin</li>
+                  <li>Düzenli beslenme alışkanlığı edinin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Order Section -->
     <section id="order" class="order-section page">
       <div class="container">
@@ -268,6 +462,8 @@
               <li><a href="#home">Ana Sayfa</a></li>
               <li><a href="#menu">Menü</a></li>
               <li><a href="#about">Hakkımızda</a></li>
+              <li><a href="#game">Oyun</a></li>
+              <li><a href="#athletes">Sporculara Özel</a></li>
               <li><a href="#contact">İletişim</a></li>
             </ul>
           </div>
