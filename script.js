@@ -353,6 +353,10 @@ function initGame() {
   // Keyboard controls
   document.addEventListener("keydown", handleKeyPress);
 
+  // Mobile touch/click controls
+  gameCanvas.addEventListener("click", handleCanvasClick);
+  gameCanvas.addEventListener("touchstart", handleCanvasTouch);
+
   // Draw initial game state
   drawGame();
 }
@@ -589,4 +593,16 @@ function resetGame() {
     endGame(false);
   }
   startGame();
+}
+
+function handleCanvasClick(e) {
+  if (!gameRunning) return;
+  e.preventDefault();
+  jump();
+}
+
+function handleCanvasTouch(e) {
+  if (!gameRunning) return;
+  e.preventDefault();
+  jump();
 }
