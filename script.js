@@ -259,56 +259,35 @@ notificationStyle.textContent = `
 `;
 document.head.appendChild(notificationStyle);
 
-// Background slider functionality
-let currentBgSlide = 0;
-let bgSlideInterval;
-
-function initBackgroundSlider() {
-  const bgSlides = document.querySelectorAll(".bg-slide");
-
-  if (!bgSlides.length) return;
-
-  function goToBgSlide(slideIndex) {
-    currentBgSlide = slideIndex;
-
-    // Remove active class from all slides
-    bgSlides.forEach((slide) => slide.classList.remove("active"));
-
-    // Add active class to current slide
-    bgSlides[slideIndex].classList.add("active");
-  }
-
-  function nextBgSlide() {
-    currentBgSlide = (currentBgSlide + 1) % bgSlides.length;
-    goToBgSlide(currentBgSlide);
-  }
-
-  // Auto-slide every 4 seconds
-  function startBgAutoSlide() {
-    bgSlideInterval = setInterval(nextBgSlide, 4000);
-  }
-
-  function stopBgAutoSlide() {
-    clearInterval(bgSlideInterval);
-  }
-
-  // Start auto-slide
-  startBgAutoSlide();
-
-  // Pause auto-slide on hover
-  const heroSection = document.querySelector(".hero");
-  if (heroSection) {
-    heroSection.addEventListener("mouseenter", stopBgAutoSlide);
-    heroSection.addEventListener("mouseleave", startBgAutoSlide);
-  }
-}
-
-// Initial load
-document.addEventListener("DOMContentLoaded", () => {
+// Tüm sayfa kaynakları (görseller dahil) yüklendikten sonra çalışacak kod
+window.onload = () => {
   loadMenuItems();
-  initBackgroundSlider();
   initGame();
-});
+
+  // Arka plan slider'ını başlatan fonksiyon
+  const initBackgroundSlider = () => {
+    const bgSlides = document.querySelectorAll(".bg-slide");
+    if (!bgSlides.length) return;
+
+    let currentBgSlide = 0;
+
+    const nextBgSlide = () => {
+      // Bir sonraki slayta geçmeden önce mevcut olanı gizle
+      bgSlides[currentBgSlide].classList.remove("active");
+
+      // Index'i güncelle
+      currentBgSlide = (currentBgSlide + 1) % bgSlides.length;
+
+      // Yeni slaytı göster
+      bgSlides[currentBgSlide].classList.add("active");
+    };
+
+    // Slider'ı 6 saniyede bir çalıştır
+    setInterval(nextBgSlide, 6000);
+  };
+
+  initBackgroundSlider();
+};
 
 // Game Logic
 let gameCanvas, gameCtx;
